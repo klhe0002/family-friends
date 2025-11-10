@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-text: var(--color-background);
+  --color-shadow: var(--box-shadow);
+  --color-button: var(--salmon);
+  --color-dark-text: var(--dark-text);
+
+  --color-button-blue: var(--button-blue);
+  --color-button-pink: var(--button-pink);
+  --color-button-green: var(--button-green);
+  --color-button-yellow: var(--button-yellow);
+  --color-button-text: var(--button-text);
+}
+
+
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --salmon: #F2968F;
+    --dark-text: #333333;
+    --box-shadow: #d5d5d57a;
+
+    --content-width: 200rem;
+    --button-blue: #ACD7FF;
+    --button-pink: #EDA8B3;
+    --button-green: #C5E59C;
+    --button-yellow: #F1E689;
+    --button-text: #6B8B42;
+
+
+  }
+
+body  {
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  grid-template-columns: [full-start] 1fr [content-start] minmax(0,200px) [hero-start] minmax(0, 200px) [content-end] 1fr [hero-end];
+  grid-template-rows: auto 1fr auto;
+}
+
+main{
+  grid-column: content;
+  background: rgb(255, 255, 255);
+}
+
+.border {
+  border: solid;
+  border-color: grey;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+
