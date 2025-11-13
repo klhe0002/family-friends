@@ -1,19 +1,3 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-cacheComponents: true,
-images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'placecats.com',
-        pathname: '/**',
-      },
-    ],
-  },
-};
-
-export default nextConfig;
-
 // /** @type {import('next').NextConfig} */
 // const nextConfig = {
 // cacheComponents: true,
@@ -21,7 +5,7 @@ export default nextConfig;
 //     remotePatterns: [
 //       {
 //         protocol: 'https',
-//         hostname: 'cdn.dummyjson.com',
+//         hostname: 'placecats.com',
 //         pathname: '/**',
 //       },
 //     ],
@@ -29,3 +13,19 @@ export default nextConfig;
 // };
 
 // export default nextConfig;
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+cacheComponents: true,
+images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.dummyjson.com',
+        pathname: '/**',
+      },
+    ],
+  },
+};
+
+export default nextConfig;

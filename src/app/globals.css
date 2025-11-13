@@ -35,7 +35,14 @@
     --button-yellow: #F1E689;
     --button-text: #6B8B42;
 
-
+  --step--2: clamp(0.7813rem, 0.7736rem + 0.0341vw, 0.8rem);
+  --step--1: clamp(0.9375rem, 0.9119rem + 0.1136vw, 1rem);
+  --step-0: clamp(1.125rem, 1.0739rem + 0.2273vw, 1.25rem);
+  --step-1: clamp(1.35rem, 1.2631rem + 0.3864vw, 1.5625rem);
+  --step-2: clamp(1.62rem, 1.4837rem + 0.6057vw, 1.9531rem);
+  --step-3: clamp(1.944rem, 1.7405rem + 0.9044vw, 2.4414rem);
+  --step-4: clamp(2.3328rem, 2.0387rem + 1.3072vw, 3.0518rem);
+  --step-5: clamp(2.7994rem, 2.384rem + 1.8461vw, 3.8147rem);
   }
 
 body  {
@@ -57,8 +64,39 @@ main{
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: var(--step-2);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: var(--step--1);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: var(--dark-text);
+}
+
+h3 {
+  font-size: var(--step--2);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  color: rgb(87, 84, 84);
   font-weight: bold;
 }
+
+h4 {
+  font-size: var(--step--2);
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: var(--step--2);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
 
 
