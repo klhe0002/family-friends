@@ -4,16 +4,24 @@ import { LuMessageCircle } from "react-icons/lu";
 import { FaRegUser } from "react-icons/fa6";
 
 const Footer = () => {
-    return ( 
-    <div className="bg-white shadow-xl col-[content] ">
+    return (
+      <div className="bg-white shadow-xl col-[content] fixed bottom-0 ">
         <ul className="flex justify-around p-4 ">
-            <li><FiHome /></li>
-            <li><FaRegStar /></li>
-            <li><LuMessageCircle /></li>
-            <li><FaRegUser /></li>
+          <li>
+            <FiHome />
+          </li>
+          <li>
+            <FaRegStar />
+          </li>
+          <li>
+            <LuMessageCircle />
+          </li>
+          <li>
+            <FaRegUser />
+          </li>
         </ul>
-    </div> 
-);
+      </div>
+    );
 }
  
 export default Footer;
