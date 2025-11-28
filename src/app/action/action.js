@@ -1,4 +1,7 @@
-"use server"; //
+"use server";
+import { resolve } from "styled-jsx/css";
+
+//
 
 export const submitProduct = async (prevState, formData) => {
   //
@@ -14,26 +17,38 @@ export const submitProduct = async (prevState, formData) => {
     error.productname = "Must be at least 5 charecters";
   }
 
-   if (!description) {
-     error.description = "Type a price!";
-   } else if (description.length < 10) {
-     error.description = "price must be at least 10 characters";
-   }
-
-
   if (!price) {
     error.price = "Type a price!";
   } else if (isNaN(Number(price))) {
     error.price = "Type a valid price!";
-  } 
-//   else if (!pricePattern.test(priceRaw)) {
-//     error.price = "Price must have two decimals, e.g. 12.34";
-//   }
+  }
 
+  if (!description) {
+    error.description = "Type a price!";
+  } else if (description.length < 10) {
+    error.description = "price must be at least 10 characters";
+  }
 
   if (Object.keys(error).length > 0) {
     return { error, productname, price };
+    // return state;
   }
+  //   await new Promise((resolve) => setTimeout(resolve, 2000)); //for at teste og se hvordan submitting ser ud
+  const response = await fetch("https://dummyjson.com/products/add", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      title: productname, //dette er en variabel
+      price: price,
+      description: description,
+    }),
+  });
 
-  return { succes: true };
+  console.log(response);
+  //   state.succes = response.ok;
+  //   return state;
+
+  return { succes: response.ok }; //når der rammes et return så hopper den ud af functionen, derfor kan der være to
 };
+
+
