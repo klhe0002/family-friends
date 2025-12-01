@@ -39,7 +39,7 @@ const productForm = () => {
         <div className="grid col-[content]">
           <input
             id="productname"
-            name="productname"
+            name="productname" 
             type="text"
             placeholder="Product Name"
             defaultValue={state.productname} //så keg kan beholde det som er skrevet uden at den sletter det
